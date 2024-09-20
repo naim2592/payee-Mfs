@@ -16,38 +16,63 @@
                 <!-- available balance -->
                 <div class="stats shadow">
                     <div class="stat">
-                      <div class="stat-value">89,400</div>
+                      <div id="pBalance" class="stat-value">89400</div>
                       <div class="stat-desc">Available Balance</div>
                     </div>
                   </div>
             <div class="divider"></div>
 <!-- uswr action buttton -->
            <div>
-            <button class="btn btn-lg">Add Money</button>
-<button class="btn btn-lg">Cash Out</button>
-           </div><br>
+            <button id="add-btn" class="btn btn-lg">Add Money</button>
+            <button id="out-btn" class="btn btn-lg">Cash Out</button>
+           </div><div class="divider"></div>
+
          <!-- form start -->
-         <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+         <div id="cashin" class="hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
             <form class="card-body">
               <div class="form-control">
                 <label class="label">
                   <span class="label-text">AMOUNT</span>
                 </label>
-                <input type="number" placeholder="Amount" class="input input-bordered" required />
+                <input type="text" placeholder="Amount" id="amount" class="input input-bordered" required />
               </div>
               <div class="form-control">
                 <label class="label">
                   <span class="label-text">PIN</span>
                 </label>
-                <input type="password" placeholder="Your Pin" class="input input-bordered" autocomplete="off" required />
+                <input type="password" placeholder="Your Pin" id="pin" class="input input-bordered" autocomplete="off" required />
                 
               </div>
               <div class="form-control mt-6">
-                <button class="btn btn-primary">Login</button>
+                <button id="addmoney-btn" class="btn btn-primary">Add Money</button>
               </div>
             </form>
           </div>
          <!-- form end -->
+          <!-- cashout form strat -->
+
+          <div id="cashout" class="hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+            <form class="card-body">
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">AMOUNT</span>
+                </label>
+                <input type="text" placeholder="Amount" id="cashout-amount" class="input input-bordered" required />
+              </div>
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">PIN</span>
+                </label>
+                <input type="password" placeholder="Enter PIN" id="cashout-pin" class="input input-bordered" required />
+                
+              </div>
+              <div class="form-control mt-6">
+                <button id="cashout-btn" class="btn btn-primary">Cash Out</button>
+              </div>
+            </form>
+          </div>
+
+          <!-- cashout form end -->
 
               </div>
             </div>
